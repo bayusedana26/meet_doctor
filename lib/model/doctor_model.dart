@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class DoctorModel {
@@ -5,6 +6,8 @@ class DoctorModel {
   String image;
   Color imageBox;
   List<String> specialities;
+  List<CalendarModel> calendar;
+  List<TimeModel> time;
   double score;
   String bio;
 
@@ -15,6 +18,8 @@ class DoctorModel {
     required this.specialities,
     required this.score,
     required this.bio,
+    required this.calendar,
+    required this.time,
   });
 
   static List<DoctorModel> getDoctors() {
@@ -28,6 +33,17 @@ class DoctorModel {
         specialities: ['Dentist', 'Pediatrician'],
         score: 4.5,
         bio: "Has 20 years exp",
+        calendar: [
+          CalendarModel(dayNumber: 24, dayName: "Mon", isSelected: true),
+          CalendarModel(dayNumber: 25, dayName: "Tue", isSelected: false),
+          CalendarModel(dayNumber: 26, dayName: "Wed", isSelected: false),
+          CalendarModel(dayNumber: 27, dayName: "Thu", isSelected: false),
+        ],
+        time: [
+          TimeModel(time: "09.00 AM", isSelected: true),
+          TimeModel(time: "12.00 AM", isSelected: false),
+          TimeModel(time: "03.00 PM", isSelected: false),
+        ],
       ),
     );
 
@@ -39,6 +55,14 @@ class DoctorModel {
         specialities: ['Obgyn'],
         score: 4.5,
         bio: "Has 20 years exp",
+        calendar: [
+          CalendarModel(dayNumber: 25, dayName: "Tue", isSelected: false),
+        ],
+        time: [
+          TimeModel(time: "09.00 AM", isSelected: true),
+          TimeModel(time: "12.00 AM", isSelected: false),
+          TimeModel(time: "03.00 PM", isSelected: false),
+        ],
       ),
     );
 
@@ -50,6 +74,14 @@ class DoctorModel {
         specialities: ['Cardiologist', 'Pediatrician'],
         score: 4.5,
         bio: "Has 20 years exp",
+        calendar: [
+          CalendarModel(dayNumber: 26, dayName: "Wed", isSelected: false),
+        ],
+        time: [
+          TimeModel(time: "09.00 AM", isSelected: true),
+          TimeModel(time: "12.00 AM", isSelected: false),
+          TimeModel(time: "03.00 PM", isSelected: false),
+        ],
       ),
     );
 
@@ -61,6 +93,14 @@ class DoctorModel {
         specialities: ['Healthcare', 'Dentist'],
         score: 4.5,
         bio: "Has 20 years exp",
+        calendar: [
+          CalendarModel(dayNumber: 27, dayName: "Thu", isSelected: false),
+        ],
+        time: [
+          TimeModel(time: "09.00 AM", isSelected: true),
+          TimeModel(time: "12.00 AM", isSelected: false),
+          TimeModel(time: "03.00 PM", isSelected: false),
+        ],
       ),
     );
 
@@ -72,9 +112,36 @@ class DoctorModel {
         specialities: ['Healthcare', 'Pediatrician'],
         score: 4.5,
         bio: "Has 20 years exp",
+        calendar: [
+          CalendarModel(dayNumber: 24, dayName: "Mon", isSelected: false),
+        ],
+        time: [
+          TimeModel(time: "09.00 AM", isSelected: true),
+          TimeModel(time: "12.00 AM", isSelected: false),
+          TimeModel(time: "03.00 PM", isSelected: false),
+        ],
       ),
     );
 
     return doctors;
   }
+}
+
+class CalendarModel {
+  final int dayNumber;
+  final String dayName;
+  bool isSelected;
+
+  CalendarModel({
+    required this.dayNumber,
+    required this.dayName,
+    required this.isSelected,
+  });
+}
+
+class TimeModel {
+  final String time;
+  bool isSelected;
+
+  TimeModel({required this.time, required this.isSelected});
 }
