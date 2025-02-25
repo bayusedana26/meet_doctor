@@ -62,7 +62,28 @@ class _DoctorDetailViewState extends State<DoctorDetailView> {
             calendar(),
             const SizedBox(height: 20),
             time(),
+            Spacer(),
+            bookButton(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget bookButton() {
+    return MaterialButton(
+      onPressed: () {},
+      height: 55,
+      minWidth: double.infinity,
+      elevation: 0,
+      color: Colors.red,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+      child: Text(
+        "Book an appointment",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
@@ -93,9 +114,10 @@ class _DoctorDetailViewState extends State<DoctorDetailView> {
                 },
                 child: Container(
                   height: 50,
-                  width: 50,
+                  width: 100,
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(16),
                     color:
                         timeModel[index].isSelected
                             ? const Color(0xff51A8FF)

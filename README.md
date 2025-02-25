@@ -1,16 +1,67 @@
-# meet_doctor
+# Meet Doctor
 
-A new Flutter project.
+A simple and functional **Flutter** application that allows users to browse a list of doctors based on their specialties. Users can filter doctors by category, view doctor details, and book an appointment by selecting a date and time.
 
-## Getting Started
+## Features
+- Browse doctors by specialty
+- View doctor details (name, specialty, experience, rating, etc.)
+- Book an appointment with date and time selection
 
-This project is a starting point for a Flutter application.
+## Screenshots
+_Add screenshots here if available_
 
-A few resources to get you started if this is your first Flutter project:
+## Demo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Demo](result/play.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+_If the GIF does not display, open it directly from the `result/play.gif` file._
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/bayusedana26/meet_doctor.git
+   cd meet_doctor
+   ```
+2. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+3. Run the app:
+   ```bash
+   flutter run
+   ```
+
+## Project Structure
+```plaintext
+meet_doctor/
+├── lib/
+│   ├── main.dart # Entry point
+│   ├── model/    # Data models
+│   ├── view/     # UI screens
+├── assets/       # Images & other assets
+├── result/
+│   ├── play.mp4   # Demo video
+│   ├── play.gif   # Demo GIF
+└── pubspec.yaml   # Dependencies & configuration
+```
+
+## Dependencies
+Make sure you have the following dependencies in your `pubspec.yaml`:
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  provider: ^6.1.3
+  intl: ^0.18.1  # For date formatting
+```
+
+## Contributing
+Feel free to contribute by submitting a pull request or opening an issue.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+🚀 **Developed with Flutter**
