@@ -7,12 +7,11 @@ A simple and functional **Flutter** application that allows users to browse a li
 - View doctor details (name, specialty, experience, rating, etc.)
 - Book an appointment with date and time selection
 
-## Screenshots
-_Add screenshots here if available_
-
 ## Demo
 
-![Demo](result/play.gif)
+<p align="center">
+  <img src="result/play.gif" width="300" alt="Demo">
+</p>
 
 _If the GIF does not display, open it directly from the `result/play.gif` file._
 
